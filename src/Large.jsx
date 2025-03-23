@@ -3,9 +3,10 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedi
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ArrowUpRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import writeImage from './assets/write.png';
 import homeImage from "./assets/homelar.png";
 import bulbImage from "./assets/bulb.jpg"
@@ -247,6 +248,47 @@ const Large = () => {
 
        
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-blue-600"></div>
+      </div>
+    </section>
+
+    <section className="py-8 bg-gray-100 w-full">
+      <div className="container mx-auto px-6 relative">
+       
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-start">
+          Using Our Technology Tools
+        </h2>
+
+       
+        <button className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 transition swiper-button-prev">
+          <ChevronLeft size={24} />
+        </button>
+
+        <button className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 transition swiper-button-next">
+          <ChevronRight size={24} />
+        </button>
+
+        
+        <Swiper
+          modules={[Autoplay, Navigation]}
+          slidesPerView={2.5} 
+          breakpoints={{
+            480: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            1024: { slidesPerView: 5 }
+          }}
+          spaceBetween={15}
+          autoplay={{ delay: 1500, disableOnInteraction: false }}
+          navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
+          loop={true}
+        >
+          {techTools.map((tool, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-3 w-[150px] h-[90px] flex-shrink-0">
+                <img src={tool.img} alt={tool.name} className="h-12 object-contain" />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
 
