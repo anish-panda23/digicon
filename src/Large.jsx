@@ -207,7 +207,7 @@ const Large = () => {
          
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 transition "
+            className="absolute left-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 transition"
           >
             <ChevronLeft size={24} />
           </button>
@@ -276,40 +276,33 @@ const Large = () => {
 
 
    
-<section className="p-10 text-start">
-  <h3 className="text-3xl font-bold mb-2 ms-15">Our Portfolios</h3>
-  <p className="text-md ms-15">
-    Showcasing Excellence Across Industries – From Custom Websites and Apps to SEO, PPC, CRM, and Blockchain Solutions. Our portfolio reflects innovation, performance,
-  </p>
-  <p className="mb-6 ms-15">
-    and success in delivering tailored digital solutions for businesses worldwide
-  </p>
-  <div className="grid grid-cols-1 md:grid-cols-5 gap-1 ms-8">
-    {portfolios.map((portfolio, index) => (
-      <div
-        key={index}
-        className={`relative bg-cover bg-center text-white rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center group
-          ${index === 0 ? "h-[300px] w-[320px] hover:w-[170px]" : "h-[300px] w-[170px]"}
-        `}
-        style={{ backgroundImage: `url('${writeImage}')` }}
-      >
-        {index === 0 ? (
-          <div className="absolute bottom-0 left-0 w-full bg-opacity-60 p-4 text-white rounded-b-lg">
-            <h4 className="text-lg font-bold">UI/UX Development</h4>
-            <p className="text-sm">
-              Built on the vision of Swami Vivekananda, Digicon Marketer was founded in 2022 by Anamitra Sarkhel
+    <section className="p-10 text-start">
+      <h3 className="text-3xl font-bold mb-2 ms-15">Our Portfolios</h3>
+      <p className='text-md ms-15 '>Showcasing Excellence Across Industries – From Custom Websites and Apps to SEO, PPC, CRM, and Blockchain Solutions. Our portfolio reflects innovation, performance,</p>
+      <p className="   mb-6 ms-15">
+      and success in delivering tailored digital solutions for businesses worldwide
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-1 ms-8">
+        {portfolios.map((portfolio, index) => (
+          <div
+            key={index}
+            className={`relative bg-cover bg-center text-white rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center group
+              ${index === 0 ? "h-[300px] w-[320px] hover:w-[170px]" : "h-[300px] w-[170px]"}
+            `}
+            style={{ backgroundImage: `url('${writeImage}')` }}
+          >
+            
+            <p
+              className={`text-lg font-semibold w-full bg-opacity-50 p-2 transition-all duration-300 ease-in-out text-center
+                ${index === 0 ? "group-hover:rotate-90" : "rotate-90"}
+              `}
+            >
+              {portfolio}
             </p>
           </div>
-        ) : (
-          <p className="text-lg font-semibold w-full bg-opacity-50 p-2 transition-all duration-300 ease-in-out text-center rotate-90">
-            {portfolio}
-          </p>
-        )}
+        ))}
       </div>
-    ))}
-  </div>
-</section>
-
+    </section>
 
    
     <section className="p-10 text-center bg-gray-200">
