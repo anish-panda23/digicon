@@ -323,7 +323,7 @@ const Large = () => {
               <SwiperSlide key={index} className="flex justify-center">
                 <div
                   className="flex flex-col items-center bg-white shadow-md rounded-xl p-4 
-                      w-full max-w-[180px] sm:max-w-[200px] md:max-w-[214px] h-[100px] 
+                      w-full max-w-[180px] sm:max-w-[200px] md:max-w-[180px] h-[100px] 
                       transition-transform transform hover:scale-105 hover:shadow-lg"
                 >
                   <img
