@@ -269,26 +269,27 @@ const Large = () => {
 
         
         <Swiper
-          modules={[Autoplay, Navigation]}
-          slidesPerView={2.5} 
-          breakpoints={{
-            480: { slidesPerView: 3 },
-            768: { slidesPerView: 4 },
-            1024: { slidesPerView: 5 }
-          }}
-          spaceBetween={15}
-          autoplay={{ delay: 1500, disableOnInteraction: false }}
-          navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-          loop={true}
-        >
-          {techTools.map((tool, index) => (
-            <SwiperSlide key={index}>
-              <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-3 w-[150px] h-[90px] flex-shrink-0">
-                <img src={tool.img} alt={tool.name} className="h-12 object-contain" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+  modules={[Autoplay, Navigation]}
+  slidesPerView={2.5}
+  breakpoints={{
+    320: { slidesPerView: 1, spaceBetween: 8 },
+    480: { slidesPerView: 2, spaceBetween: 15 }, 
+    768: { slidesPerView: 3, spaceBetween: 20 }, 
+    1024: { slidesPerView: 4, spaceBetween: 25 } 
+  }}
+  autoplay={{ delay: 1500, disableOnInteraction: false }}
+  navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
+  loop={true}
+>
+  {techTools.map((tool, index) => (
+    <SwiperSlide key={index}>
+      <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-3 w-[150px] h-[90px] flex-shrink-0">
+        <img src={tool.img} alt={tool.name} className="h-12 object-contain" />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
       </div>
     </section>
 
