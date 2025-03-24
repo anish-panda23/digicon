@@ -392,7 +392,7 @@ const Large = () => {
     SEO, PPC, CRM, and Blockchain Solutions. Our portfolio reflects innovation,
     performance,
   </p>
-  <p className="mb-6 ms-8 md:ms-28">
+  <p className="mb-6 ms-8 md:ms-16">
     and success in delivering tailored digital solutions for businesses
     worldwide.
   </p>
