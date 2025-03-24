@@ -385,59 +385,63 @@ const Large = () => {
         </div>
       </section>
 
-      <section className="p-10 text-start">
-        <h3 className="text-3xl font-bold mb-2 ms-28">Our Portfolios</h3>
-        <p className="text-md ms-28">
-          Showcasing Excellence Across Industries – From Custom Websites and
-          Apps to SEO, PPC, CRM, and Blockchain Solutions. Our portfolio
-          reflects innovation, performance,
-        </p>
-        <p className="mb-6 ms-28">
-          and success in delivering tailored digital solutions for businesses
-          worldwide.
-        </p>
+      <section className="p-6 text-start">
+  <h3 className="text-3xl font-bold mb-2 ms-8 md:ms-16">Our Portfolios</h3>
+  <p className="text-md ms-8 md:ms-16">
+    Showcasing Excellence Across Industries – From Custom Websites and Apps to
+    SEO, PPC, CRM, and Blockchain Solutions. Our portfolio reflects innovation,
+    performance,
+  </p>
+  <p className="mb-6 ms-8 md:ms-28">
+    and success in delivering tailored digital solutions for businesses
+    worldwide.
+  </p>
 
-        <div className="block md:hidden">
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={15}
-            slidesPerView={2}
-            autoplay={{ delay: 2000, disableOnInteraction: false }}
-            loop={true}
+  
+  <div className="block md:hidden">
+    <Swiper
+      modules={[Autoplay]}
+      spaceBetween={15} 
+      slidesPerView={2}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
+      loop={true}
+    >
+      {portfolios.map((portfolio, index) => (
+        <SwiperSlide key={index} className="flex justify-center">
+          <div
+            className="relative bg-cover bg-center text-white rounded-lg transition-all duration-500 ease-in-out flex items-center justify-center group 
+                      h-[280px] w-[140px] sm:w-[160px] hover:w-[280px] active:w-[280px] mx-2"
+            style={{ backgroundImage: `url('${writeImage}')` }}
           >
-            {portfolios.map((portfolio, index) => (
-              <SwiperSlide key={index} className="flex justify-center">
-                <div
-                  className={`relative bg-cover bg-center text-white rounded-lg transition-all duration-500 ease-in-out flex items-center justify-center group 
-                  h-[300px] w-[160px] hover:w-[300px] active:w-[300px] mx-2`}
-                  style={{ backgroundImage: `url('${writeImage}')` }}
-                >
-                  <p
-                    className="text-lg font-semibold bg-opacity-50 p-2 transition-all duration-500 ease-in-out text-center 
-                  rotate-90 group-hover:rotate-0 group-active:rotate-0"
-                  >
-                    {portfolio}
-                  </p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
-        <div className="hidden md:flex justify-center space-x-15">
-          {portfolios.map((portfolio, index) => (
-            <div
-              key={index}
-              className="relative bg-cover bg-center text-white rounded-lg transition-all duration-500 ease-in-out flex items-center justify-center group h-[300px] w-[180px] hover:w-[320px]"
-              style={{ backgroundImage: `url('${writeImage}')` }}
+            <p
+              className="text-lg font-semibold bg-opacity-50 p-2 transition-all duration-500 ease-in-out text-center 
+                        rotate-90 group-hover:rotate-0 group-active:rotate-0"
             >
-              <p className="text-lg font-semibold bg-opacity-50 p-2 transition-all duration-500 ease-in-out text-center rotate-90 group-hover:rotate-0">
-                {portfolio}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+              {portfolio}
+            </p>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+
+
+  <div className="hidden md:flex justify-center space-x-8">
+    {portfolios.map((portfolio, index) => (
+      <div
+        key={index}
+        className="relative bg-cover bg-center text-white rounded-lg transition-all duration-500 ease-in-out flex items-center justify-center group 
+                  h-[300px] w-[180px] hover:w-[320px]"
+        style={{ backgroundImage: `url('${writeImage}')` }}
+      >
+        <p className="text-lg font-semibold bg-opacity-50 p-2 transition-all duration-500 ease-in-out text-center rotate-90 group-hover:rotate-0">
+          {portfolio}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       <section className="p-10 text-center bg-gray-200">
         <div className="container mx-auto">
