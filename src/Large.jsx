@@ -357,7 +357,7 @@ const Large = () => {
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 
-                     w-full max-w-[334px]"
+                     w-full max-w-[314px]"
               >
                 <img
                   src={service.img}
