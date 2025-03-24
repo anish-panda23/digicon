@@ -251,47 +251,47 @@ const Large = () => {
       </div>
     </section>
 
-    <section className="py-8 bg-gray-100 w-full">
-      <div className="container mx-auto px-6 relative">
-       
-        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-start">
-          Using Our Technology Tools
-        </h2>
+    <section className="py-12 w-full">
+  <div className="container mx-auto px-6 relative">
+  
+    <h2 className="text-2xl font-extrabold text-gray-900 mb-6 text-start">
+      Using Our Technology Tools
+    </h2>
 
-       
-        <button className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 transition swiper-button-prev">
-          <ChevronLeft size={24} />
-        </button>
+   
+    <button className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-3 bg-white rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 swiper-button-prev">
+      <ChevronLeft size={28} />
+    </button>
 
-        <button className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 transition swiper-button-next">
-          <ChevronRight size={24} />
-        </button>
+    <button className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-3 bg-white rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 swiper-button-next">
+      <ChevronRight size={28} />
+    </button>
 
-        
-        <Swiper
-  modules={[Autoplay, Navigation]}
-  slidesPerView={2.5}
-  breakpoints={{
-    320: { slidesPerView: 1, spaceBetween: 8 },
-    480: { slidesPerView: 2, spaceBetween: 15 }, 
-    768: { slidesPerView: 3, spaceBetween: 20 }, 
-    1024: { slidesPerView: 4, spaceBetween: 25 } 
-  }}
-  autoplay={{ delay: 1500, disableOnInteraction: false }}
-  navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-  loop={true}
->
-  {techTools.map((tool, index) => (
-    <SwiperSlide key={index}>
-      <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-3 w-[150px] h-[90px] flex-shrink-0">
-        <img src={tool.img} alt={tool.name} className="h-12 object-contain" />
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+    
+    <Swiper
+      modules={[Autoplay, Navigation]}
+      slidesPerView={2.5}
+      breakpoints={{
+        320: { slidesPerView: 1, spaceBetween: 10 },
+        480: { slidesPerView: 2, spaceBetween: 15 },
+        768: { slidesPerView: 3, spaceBetween: 20 },
+        1024: { slidesPerView: 4, spaceBetween: 25 },
+      }}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
+      navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
+      loop={true}
+    >
+      {techTools.map((tool, index) => (
+        <SwiperSlide key={index}>
+          <div className="flex flex-col items-center bg-white shadow-md rounded-xl p-4 w-[160px] h-[100px] transition-transform transform hover:scale-105 hover:shadow-lg ms-20">
+            <img src={tool.img} alt={tool.name} className="h-14 object-contain" />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</section>
 
-      </div>
-    </section>
 
 
 
